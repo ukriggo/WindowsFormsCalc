@@ -92,7 +92,7 @@ namespace WindowsFormsCalc
             string s = displey.Text;
             if ((s.Length) == 0)   // no numbers on display
             {
-                displey.Text += "";             
+                displey.Text += "";
 
             }
             else
@@ -102,9 +102,9 @@ namespace WindowsFormsCalc
                 tochka = false;
                 c = "+";                            // what to do
             }
-                      
-            
-            
+
+
+
         }
 
         private void Btn_minus_Click(object sender, EventArgs e)
@@ -120,10 +120,10 @@ namespace WindowsFormsCalc
             {
                 displey.Text = "";          // convert display from negative (clear "-")
             }
-            
+
             else  // делаем операцию вычитания 
             {
-                
+
                 a = Convert.ToDouble(displey.Text); // first number from display
                 displey.Text = "";                  // than make display empty
                 tochka = false;

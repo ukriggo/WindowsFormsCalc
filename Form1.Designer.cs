@@ -256,7 +256,6 @@
             this.displey.Size = new System.Drawing.Size(218, 46);
             this.displey.TabIndex = 18;
             this.displey.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.displey.UseWaitCursor = true;
             // 
             // IgGoCalc
             // 
@@ -289,7 +288,7 @@
             this.MinimizeBox = false;
             this.Name = "IgGoCalc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DevEducation ";
+            this.Text = "DevEducation  IgGo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
