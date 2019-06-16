@@ -21,7 +21,6 @@ namespace WindowsFormsCalc
         public double b = 0; // хранение второго числа
         public string c = "";   // хранение знака математического действия
         bool tochka = false;  // признак наличия точки при вводе чисел
-        bool negativnoe = false;  // признак наличия точки при вводе чисел
 
         private void Btn_0_Click(object sender, EventArgs e)
         {
@@ -90,10 +89,22 @@ namespace WindowsFormsCalc
 
         private void Btn_plus_Click(object sender, EventArgs e)
         {
-            a = Convert.ToDouble(displey.Text); // first number from display
-            displey.Text = "";                  // than make display empty
-            tochka = false;
-            c = "+";                            // what to do
+            string s = displey.Text;
+            if ((s.Length) == 0)   // no numbers on display
+            {
+                displey.Text += "";             
+
+            }
+            else
+            {
+                a = Convert.ToDouble(displey.Text); // first number from display
+                displey.Text = "";                  // than make display empty
+                tochka = false;
+                c = "+";                            // what to do
+            }
+                      
+            
+            
         }
 
         private void Btn_minus_Click(object sender, EventArgs e)
@@ -105,16 +116,17 @@ namespace WindowsFormsCalc
                 displey.Text += "-";          // set display as negative "-"   
 
             }
-            else
+            else if (s == "-") // смена знака
             {
-//                if (s=="-")
-//                {
-//                    displey.Text = "";          // convert display from negative (clear "-")
-//                }
+                displey.Text = "";          // convert display from negative (clear "-")
+            }
+            
+            else  // делаем операцию вычитания 
+            {
+                
                 a = Convert.ToDouble(displey.Text); // first number from display
                 displey.Text = "";                  // than make display empty
                 tochka = false;
-                negativnoe = false;                 // очистка признака негативного числа
                 c = "-";                            // what to do
 
             }
@@ -122,22 +134,36 @@ namespace WindowsFormsCalc
 
         private void Btn_mult_Click(object sender, EventArgs e)
         {
+            string s = displey.Text;
+            if ((s.Length) == 0)   // no numbers on display
+            {
+                displey.Text += "";
 
-            a = Convert.ToDouble(displey.Text); // first number from display
-            displey.Text = "";                  // than make display empty
-            tochka = false;
-            negativnoe = false;
-            c = "*";                            // what to do
+            }
+            else
+            {
+                a = Convert.ToDouble(displey.Text); // first number from display
+                displey.Text = "";                  // than make display empty
+                tochka = false;
+                c = "*";                            // what to do
+            }
         }
 
         private void Btn_div_Click(object sender, EventArgs e)
         {
+            string s = displey.Text;
+            if ((s.Length) == 0)   // no numbers on display
+            {
+                displey.Text += "";
 
-            a = Convert.ToDouble(displey.Text); // first number from display
-            displey.Text = "";                  // than make display empty
-            tochka = false;
-            negativnoe = false;
-            c = "/";                            // what to do
+            }
+            else
+            {
+                a = Convert.ToDouble(displey.Text); // first number from display
+                displey.Text = "";                  // than make display empty
+                tochka = false;
+                c = "/";                            // what to do
+            }
         }
 
         private void Btn_do_Click(object sender, EventArgs e)
