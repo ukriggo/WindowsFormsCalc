@@ -82,5 +82,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoCalc\UnitTestCalc\UnitTestCalc.csproj">
+      <Project>{1975b162-dec3-4418-9939-4a5387157dc4}</Project>
+      <Name>UnitTestCalc</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
