@@ -314,7 +314,7 @@
         private System.Windows.Forms.Button btn_plus;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_ce;
-        private System.Windows.Forms.TextBox displey;
+        public System.Windows.Forms.TextBox displey;
     }
 }
 
